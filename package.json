@@ -1,0 +1,14 @@
+{
+  "name": "card-game",
+  "version": "1.0.0",
+  "description": "Guess the card",
+  "main": "index.js",
+  "author": "Skull",
+  "license": "MIT",
+  "dependencies": {
+    "readline": "^1.3.0"
+  },
+  "scripts": {
+    "start": "tsc index.ts && node index.js"
+  }
+}
