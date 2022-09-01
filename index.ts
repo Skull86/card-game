@@ -2,7 +2,7 @@ import * as readline from "readline";
 
 type Suit = "Diamonds" | "Cups" | "Hearts" | "Spades";
 
-const SUITS = ["Diamonds", "Cups", "Hearts", "Spades"];
+const SUITS: Suit[] = ["Diamonds", "Cups", "Hearts", "Spades"];
 
 type CardValue =
   | "2"
@@ -19,7 +19,7 @@ type CardValue =
   | "K"
   | "A";
 
-const CARD_VALUES = [
+const CARD_VALUES: CardValue[] = [
   "2",
   "3",
   "4",
@@ -48,9 +48,18 @@ function printMenu() {
 
 function getUserInput() {}
 
-function getRandomCard() {}
+function getRandomCard() {
+  const suitIndex = Math.floor(Math.random() * SUITS.length);
+  const cardValueIndex = Math.floor(Math.random() * CARD_VALUES.length);
+  const card: Card = {
+    suit: SUITS[suitIndex],
+    value: CARD_VALUES[cardValueIndex],
+  };
+  return card;
+}
 
 function main() {
+  getRandomCard();
   printMenu();
 }
 
